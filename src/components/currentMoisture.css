@@ -1,0 +1,45 @@
+.current-moisture {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5vw;
+}
+
+.moisture-button {
+    position: relative;
+    width: 20vw;
+    height: 8vw;
+    color: rgb(109, 109, 109);
+    display: block;
+    text-decoration: none;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: solid 1px #61dafb;
+    background: #61dafb;
+    text-align: center;
+    padding: 1.3vw 2vw;
+    font-size: 4.7vw;
+    line-height: 1.5;
+    transition: all 0.1s;
+    box-shadow: 1px 1vw 0px #316c7c;
+}
+.moisture-button:active{
+    -webkit-box-shadow: 0px 2px 0px #316c7c;
+    -moz-box-shadow: 0px 2px 0px #316c7c;
+    box-shadow: 0px 2px 0px #316c7c;
+    position:relative;
+    top:7px;
+}
+
+.moisture-readout {
+    font-size: 5vw;
+    margin: 5vw;  
+}
+
+.current-moisture-timeStamp {
+    color: rgb(109, 109, 109);
+    margin-top: 15px;
+    font-size: 2.2vw;
+
+}
