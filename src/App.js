@@ -22,7 +22,7 @@ class App extends React.Component {
   }
 
   getMoisture = () => {
-    fetch('http://water-system-service.zapto.org/api/v1/moisturePercent')
+    fetch('https://water-system-service.zapto.org/api/v1/moisturePercent')
     .then(res => res.json())
     .then((data) => {
       const { moisturePercent, timeStamp } = data;
