@@ -36,7 +36,7 @@ class App extends React.Component {
   }
 
   getValveStatus = () => {
-    fetch('http://water-system-service.zapto.org/api/v1/valveStatus')
+    fetch('https://water-system-service.zapto.org/api/v1/valveStatus')
       .then(res => res.json())
       .then( data => {
         const { valveStatus } = data
@@ -59,7 +59,7 @@ class App extends React.Component {
       body: JSON.stringify({ status: this.state.valveStatus ? 'on' : 'off' })
     }
 
-    fetch('http://water-system-service.zapto.org/api/v1/valveController', reqOpts)
+    fetch('https://water-system-service.zapto.org/api/v1/valveController', reqOpts)
       .then( res => res.json())
       .then( data => {
         const { valveStatus } = data
