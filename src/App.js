@@ -22,7 +22,7 @@ class App extends React.Component {
   }
 
   getMoisture = () => {
-    fetch('http://localhost:3000/api/v1/moisturePercent')
+    fetch('http://water-system-service.zapto.org/api/v1/moisturePercent')
     .then(res => res.json())
     .then((data) => {
       const { moisturePercent, timeStamp } = data;
@@ -36,7 +36,7 @@ class App extends React.Component {
   }
 
   getValveStatus = () => {
-    fetch('http://localhost:3000/api/v1/valveStatus')
+    fetch('http://water-system-service.zapto.org/api/v1/valveStatus')
       .then(res => res.json())
       .then( data => {
         const { valveStatus } = data
@@ -59,7 +59,7 @@ class App extends React.Component {
       body: JSON.stringify({ status: this.state.valveStatus ? 'on' : 'off' })
     }
 
-    fetch('http://localhost:3000/api/v1/valveController', reqOpts)
+    fetch('http://water-system-service.zapto.org/api/v1/valveController', reqOpts)
       .then( res => res.json())
       .then( data => {
         const { valveStatus } = data
